@@ -6,10 +6,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    // Çıplak Class Kalmasın
-
-    public interface ICategoryDal:IEntityRepository<Category>
+    public interface IOrderDal:IEntityRepository<Order>
     {
-   
     }
 }
