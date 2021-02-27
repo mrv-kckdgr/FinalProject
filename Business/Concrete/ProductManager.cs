@@ -29,7 +29,8 @@ namespace Business.Concrete
         }
 
 
-
+        //Claim
+        //[SecuredOperation("product.add, admin")]
         #region Add metodunu doğrula ProductValidator'daki kurallara göre
 
         [ValidationAspect(typeof(ProductValidator))]
