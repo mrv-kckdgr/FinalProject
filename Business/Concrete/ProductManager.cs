@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -30,7 +31,7 @@ namespace Business.Concrete
 
 
         //Claim
-        //[SecuredOperation("product.add, admin")]
+        [SecuredOperation("product.add, admin")]
         #region Add metodunu doğrula ProductValidator'daki kurallara göre
 
         [ValidationAspect(typeof(ProductValidator))]
@@ -65,7 +66,7 @@ namespace Business.Concrete
         {
             // İş kodları
             // Yetkisi var mı?
-            if (DateTime.Now.Hour == 1)
+            if (DateTime.Now.Hour == 5)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
