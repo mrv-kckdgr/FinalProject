@@ -24,5 +24,6 @@ namespace Business.Abstract
         IResult Update(Product product);
 
         IResult AddTransactionTest(Product product);
+        
     }
 }
