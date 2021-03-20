@@ -76,6 +76,9 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            // Butun sistemi api kurallarına uygun olarak try - catch icine aldık.
+            app.ConfigureCustomExceptionMiddleware();
+
             //Bu web sayfasından istek geldiğinde kabul et, bu adamı biliyorum, güveniyorum demek
             app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
